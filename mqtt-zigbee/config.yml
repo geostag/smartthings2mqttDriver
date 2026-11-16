@@ -1,0 +1,7 @@
+name: 'Zigbee TempHumi MQTT'
+packageKey: 'zigbee-temphumi-mqtt'
+permissions:
+  zigbee: {}
+  lan: {}
+description: 'Zigbee Sensor with MQTT-Publish V0.1'
+

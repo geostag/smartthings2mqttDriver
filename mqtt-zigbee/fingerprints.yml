@@ -1,0 +1,7 @@
+zigbeeManufacturer:
+  - id: "sensor1"
+    deviceLabel: "Temp/Humi Sensor"
+    manufacturer: "_TZ3000_xr3htd96"
+    model: "TS0201"
+    deviceProfileName: temp-humi-mqtt
+

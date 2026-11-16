@@ -1,0 +1,53 @@
+name: temp-humi-mqtt
+components:
+  - id: main
+    capabilities:
+      - id: temperatureMeasurement
+        version: 1
+      - id: relativeHumidityMeasurement
+        version: 1
+      - id: battery
+        version: 1
+      - id: refresh
+        version: 1
+    categories:
+      - name: TempHumiditySensor
+preferences:
+  - name: mqttHost
+    title: "MQTT Broker IP"
+    description: "z.B. 192.168.1.10"
+    required: true
+    preferenceType: string
+    definition:
+      stringType: text
+      minLength: 7
+      maxLength: 15
+      default: "192.168.1.10"
+  - name: mqttPort
+    title: "MQTT Port"
+    required: true
+    preferenceType: integer
+    definition:
+      minimum: 1
+      maximum: 65535
+      default: 1883
+  - name: mqttUser
+    title: "MQTT User"
+    description: "Username to access MQTT broker"
+    required: false
+    preferenceType: string
+    definition:
+      stringType: text
+      minLength: 0
+      maxLength: 64
+      default: ""
+  - name: mqttPass
+    title: "MQTT password"
+    required: false
+    preferenceType: string
+    definition:
+      stringType: password
+      minLength: 0
+      maxLength: 64
+      default: ""
+
